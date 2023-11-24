@@ -19,15 +19,15 @@ email.addEventListener("input", (event) => {
   }
 });
 
-phone.addEventListener("input", (event) => {
-  if (phone.validity.typeMismatch) {
+function checkPhoneNumberValidity() {
+  if (phone.validity.patternMismatch) {
     phone.setCustomValidity(
       "Your number must be only digits and at least 8 digits"
     );
   } else {
     phone.setCustomValidity("");
   }
-});
+}
 
 password.addEventListener("input", (event) => {
   if (password.validity.tooShort) {
@@ -37,5 +37,7 @@ password.addEventListener("input", (event) => {
   }
 });
 
+phone.addEventListener("input", checkPhoneNumberValidity);
 password.addEventListener("input", CheckPasswordMatch);
 confirmedPassword.addEventListener("input", CheckPasswordMatch);
+CheckPasswordMatch();
