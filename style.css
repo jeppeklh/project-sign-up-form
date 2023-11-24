@@ -11,6 +11,8 @@ body {
 
 * {
   box-sizing: border-box;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 button,
@@ -51,14 +53,14 @@ input:valid + span {
 
 input:focus,
 input:focus-visible {
-  border: 1px solid rgb(174, 0, 255);
+  border: 2px solid rgb(174, 0, 255);
   outline: none;
   box-shadow: 2px 2px 5px black;
 }
 
-input:invalid {
+/* input:invalid {
   border: 2px solid red;
-}
+} */
 
 .input-container {
   position: relative;
@@ -74,7 +76,7 @@ span {
   top: 21px;
   padding: 10px;
   pointer-events: none;
-  color: white;
+  color: antiquewhite;
   opacity: 0.5;
   transition: all 0.4s;
 }
@@ -122,18 +124,21 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+
 }
 
 .paragraph {
-  background-color: white;
+  color: rgb(174, 0, 255);
+  text-align: center;
 }
 
 .form {
   padding: 5px;
-  background: linear-gradient(rgb(239, 51, 170), rgb(82, 0, 82));
+  background: linear-gradient(rgb(216, 44, 153), rgb(82, 0, 82));
   width: 80%;
   height: 60%;
-  border-radius: 5px;
+  border-radius: 10px;
   box-shadow: 5px 5px 5px;
   display: flex;
   flex-direction: column;
@@ -145,32 +150,59 @@ span {
   padding: 0 15px;
 }
 .form-header {
+  padding: 5px;
+  padding-bottom: 15px;
   margin-top: 5px;
-  color: var(--form-font-color);
+  color: rgb(22, 24, 35);
+  border-bottom: 3px solid rgb(22, 24, 35);
+  text-align: center;
+  font-weight: bolder;
+  font-size: 34px;
 }
 
 button {
-  margin: 25px;
-  margin-left: 150px;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 210px;
   padding: 2px;
-  border-radius: 5px;
-  border: 1px solid black;
-  background-color: rgb(94, 7, 194);
-  box-shadow: 2px 2px 5px;
+  border-radius: 10px;
+  background-color: rgb(22, 24, 35);
+  color: rgb(174, 0, 255);
+  border: 3px solid rgb(174, 0, 255);
+  box-shadow: 2px 2px 5px black;
   height: 40px;
   width: 40%;
+  transition: 0.7s;
+  font-weight: bold;
 }
 
 button:hover {
-  opacity: 0.7;
+  border: 3px solid black;
+  background: linear-gradient(rgb(168, 0, 168), rgb(141, 3, 141));
+  box-shadow: 2px 2px 5px;
+  color: black;
 }
 
 button:active {
-  background-color: rgb(82, 0, 96);
+  opacity: 0.5;
 }
 
 label {
   display: inline-block;
   width: 100px;
   text-align: left;
+}
+
+.form-bottom {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  font-weight: bold;
+  color: antiquewhite;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(174, 0, 255);
 }
