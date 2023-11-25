@@ -94,6 +94,11 @@ span {
   align-items: center;
   border-radius: 5px;
   box-shadow: 5px 5px 5px black;
+  transition: 0.5s;
+}
+
+.image-section:hover {
+  transform: translateX(1px);
 }
 
 .logo-container {
@@ -120,6 +125,17 @@ span {
   color: antiquewhite;
   margin-top: auto;
   text-align: center;
+  display: flex;
+  gap: 5px;
+}
+
+.fa {
+  color: antiquewhite;
+  transition: 0.5s ease-in-out;
+}
+
+.fa:hover {
+  transform: rotate(360deg) scale(1.2);
 }
 
 .content-section {
@@ -178,7 +194,7 @@ span {
   box-shadow: 2px 2px 5px black;
   height: 40px;
   width: 40%;
-  transition: 0.7s;
+  transition: 0.3s;
   font-weight: bold;
 }
 
@@ -190,7 +206,10 @@ button:hover {
 }
 
 button:active {
-  opacity: 0.5;
+  background: rgb(22, 24, 35);
+  color: rgb(174, 0, 255);
+  border: 3px solid rgb(174, 0, 255);
+  box-shadow: 2px 2px 5px black;
 }
 
 label {
